@@ -1,0 +1,242 @@
+
+#include <iostream>
+using namespace std;
+
+class Node
+{
+//
+};
+ 
+
+class List
+{
+public:
+    //构造函数 插入函数 打印函数
+    List& operator+=(List&);  //重要！重载
+};
+
+//构造
+
+//插入
+
+void Show(){
+    //自己写吧，简单
+}
+
+List& List::operator+=(List& that)
+{
+    // 交叉拼接链表
+    //如果this为空，则把that都存给this，返回this
+    if(head==NULL)
+    {
+        // 空链表调用
+        // 返回一个与B一样的链表
+        //为空时候
+        Node* cur=that.head;
+        while(cur!=NULL)
+        {
+            Insert(cur->num);
+            cur=cur->next;
+        }
+        return *this;
+    }
+    //this如果不为空，则this和that相加！！！
+    //先把this的第一个存进去，一定要控制好head!!!
+    //重点
+    //this和that都不空，则一个一个往里面存，先that后this
+    Node* cur=head;
+    Node* curA=head->next;
+    Node* curB=that.head;
+    while(curA!=NULL&&curB!=NULL)
+    {
+       Node* temp1=new Node(curB->num);
+        cur->next=temp1;
+        cur=temp1;
+        curB=curB->next;
+        Node* temp2=new Node(curA->num);
+        cur->next=temp2;
+        cur=temp2;
+        curA=curA->next;
+    }
+    //this空that不空，that空this不空两种情况，分别把不空的最后一个存进去即可
+    if(curA==NULL)
+    {
+        // this先结束，that可能还有
+        while(curB!=NULL)
+        {
+            //把that的最后一个加进去
+                    Node* temp1=new Node(curB->num);
+            cur->next=temp1;
+            cur=temp1;
+            curB=curB->next;
+        }
+        return *this;
+
+    }
+    if(curB==NULL)
+    {
+        // that先结束，this可能还有
+        while(curA!=NULL)
+        {
+            //把this的最后一个加进去
+                    Node* temp1=new Node(curA->num);
+            cur->next=temp1;
+            cur=temp1;
+            curA=curA->next;
+        }
+        return *this;
+
+    }
+    
+}
+
+int main() {
+   
+                list1+=list2;
+                list1.Print();
+            
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+enum encodeSet{ASCII,Unicoude,UTF8,ANSI};
+
+//抽象基类
+class File{
+public:
+	char* filename;
+	long filesize;
+	File(char* name, int len, long size){
+		this->filename = new char[len+1];
+		strcpy(this->filename, name);
+		this->filesize = size;
+	}
+      //纯虚函数
+	virtual void UpdateFilesize(long size)=0;
+	virtual void show()=0;
+};
+
+//文本文件类，还可以有其他文件类
+class TextFile: public File{
+private:
+      //编码方式，可以用枚举类型，简单些
+	encodeSet fileEncoder;
+public:
+	TextFile(char* name, int len, long size, int encodeFlag):File(name,len,size){
+		switch(encodeFlag){
+		case 0:		this->fileEncoder= ASCII;		break;
+		case 1:		this->fileEncoder= Unicoude;	break;
+		case 2:		this->fileEncoder= UTF8;		break;
+		case 3:		this->fileEncoder= ANSI;		break;
+		}
+	};
+	void UpdateFilesize(long size){this->filesize = size;}
+      void show();
+
+	
+};
+//如果有其他参数的show就是重载了，会不会写？
+void TextFile::show(){
+	cout<<this->filename<<" "<<this->filesize<<" ";
+	switch(this->fileEncoder){
+		case 0:		cout<<"ASCII"<<endl;		break;
+		case 1:		cout<<"Unicoude"<<endl;		break;
+		case 2:		cout<<"UTF8"<<endl;			break;
+		case 3:		cout<<"ANSI"<<endl;			break;
+		}
+}
+
+
+
+int main(){
+	char name[256],ch; 
+	long size;
+	int flag;
+	cin>>name>>size>>flag;
+	TextFile myfile(name, strlen(name),size,flag);
+      
+      File *f = &myfile;
+      f.show();      
+	f.UpdateFilesize(size);
+
+	cin>>name>>size>>flag;  //这里注意覆盖name的时候可能会出问题！要不就释放，或者定义name1，要不就用string
+	TextFile myfile1(name, strlen(name),size,flag);	
+
+      f = &myfile1;
+      f.show();      
+      f.UpdateFilesize(size);
+
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+template<class T>
+class A{
+private:
+    T *arr;
+    int len;
+public:
+    A(T a[], int L){this->arr = a; this->len=L;}
+    void sortAndShow(){
+        this->mysort();
+        this->show();
+    }
+    void show(){ 
+        //自己写
+    }
+    void mysort(){
+        //冒泡排序，会不会写？
+    }
+    T avg(){ //题目要求 去掉一个最高分，去掉一个最低分，求平均，自己写一下哈！}
+};
+
+int main(){
+    // double a[3] = {20.3, 37.5, 15.2};
+    // int b[7] = {1,2,3,3,5,6,7};
+    // char c[4] = {'A','B','C','D'};
+    int a[50]; double b[50]; char c[50];
+    int cnta, cntb, cntc;
+//根据输入的是什么数据类型来判断选这三个的哪一个
+    cin>> cnta;
+//循环输入
+    cin>> cntb;
+//循环输入
+    cin>> cntc;
+//循环输入
+
+    A<int> g1(a,cnta); //主要注意这句话的格式
+    g1.sortAndShow();
+
+    A<double> g2(b,cntb);
+    g2.sortAndShow();
+
+    A<char> g3(c,cntc);
+    g3.sortAndShow();
+
+    system("pause");
+    return 0;
+}
