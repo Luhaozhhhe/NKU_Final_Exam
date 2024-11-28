@@ -4,6 +4,11 @@
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Luhaozhhhe/NKU_Final_Exam&type=Timeline)](https://star-history.com/#Luhaozhhhe/NKU_Final_Exam&Timeline)
 
+## 免责声明
+此仓库单纯是为了分享复习资料，本人水平一般，不能保证内容都是对的，请自行甄别。如果发现了明显的错误，请联系我进行修改。
+
+另外，有关于本人github上的其他仓库的代码或者实验报告，不保证高分，不保证正确，请自行甄别。一般来说我会标明本人的实验大致得分情况。
+
 ## 为什么要开设这个库呢？
 首先就是，我在以往的学习过程中，在搜集各类学习资料、往年真题时，深感资源之难寻、内容质量良莠不齐等各方面的问题，因此为了让学弟学妹们能够共享资源、消除部分信息差，我开设了这个库，里面存放了许多备考过程中用的到的复习资料和往年真题。在此，特别感谢2021级信息安全专业的[lxmliu2002](https://github.com/lxmliu2002)和2020级计算机科学与技术专业的[NKULYX](https://github.com/NKULYX)这两位学长，提供了我在备考期间的绝大部分资料，也感谢其他的一些学长学姐免费提供的一些有用的资料，由于篇幅问题此处就不再提及了
 
