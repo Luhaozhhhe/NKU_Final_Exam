@@ -1,5 +1,16 @@
-# 南开大学计算机学院和网络空间安全学院往年期末真题
-![](/nku_final_exam_image.png)
+<div align="center">
+  <img src="./nku_final_exam_image.png" alt="NKU_Final_Exam" />
+  <h3>南开大学计算机学院和网络空间安全学院往年期末真题</h3>
+
+  <img style="display: inline-block;" src="https://img.shields.io/github/watchers/Luhaozhhhe/NKU_Final_Exam" alt="GitHub watchers" />
+  <a href="https://github.com/Luhaozhhhe/NKU_Final_Exam/stargazers"><img style="display: inline-block;" src="https://img.shields.io/github/stars/Luhaozhhhe/NKU_Final_Exam" alt="GitHub stars" /></a>
+  <a href="https://github.com/Luhaozhhhe/NKU_Final_Exam/network"><img style="display: inline-block;" src="https://img.shields.io/github/forks/Luhaozhhhe/NKU_Final_Exam" alt="GitHub forks" /></a>
+  <a href="https://github.com/Luhaozhhhe/NKU_Final_Exam/issues"><img style="display: inline-block;" src="https://img.shields.io/github/issues/Luhaozhhhe/NKU_Final_Exam" alt="GitHub issues" /></a>
+  <a href="https://github.com/Luhaozhhhe/NKU_Final_Exam/pulls"><img style="display: inline-block;" src="https://img.shields.io/github/issues-pr-closed-raw/Luhaozhhhe/NKU_Final_Exam" alt="GitHub closed pull requests" /></a>
+  <img style="display: inline-block;" src="https://img.shields.io/github/contributors/Luhaozhhhe/NKU_Final_Exam" alt="GitHub contributors" />
+  <a href="https://github.com/Luhaozhhhe/NKU_Final_Exam/blob/main/LICENSE"><img style="display: inline-block;" src="https://img.shields.io/github/license/Luhaozhhhe/NKU_Final_Exam" alt="GitHub license" /></a>
+  <img style="display: inline-block;" src="https://img.shields.io/github/repo-size/Luhaozhhhe/NKU_Final_Exam" alt="GitHub repo size" />
+</div>
 
 如果喜欢该内容，麻烦伸手点一个小小的star~
 
