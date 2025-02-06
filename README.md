@@ -12,8 +12,6 @@
   <img style="display: inline-block;" src="https://img.shields.io/github/repo-size/Luhaozhhhe/NKU_Final_Exam" alt="GitHub repo size" />
 </div>
 
-如果喜欢该内容，麻烦伸手点一个小小的star~
-
 [![Star History Chart](https://api.star-history.com/svg?repos=Luhaozhhhe/NKU_Final_Exam&type=Timeline)](https://star-history.com/#Luhaozhhhe/NKU_Final_Exam&Timeline)
 
 ## 免责声明
